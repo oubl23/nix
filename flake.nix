@@ -9,7 +9,7 @@
     };
     nixgl.url = "github:nix-community/nixGL";
     hyprland = {
-      url = "github:hyprwm/Hyprland?ref=v0.39.1";
+      url = "github:hyprwm/Hyprland?ref=v0.40.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hycov = {
@@ -30,7 +30,6 @@
     , ...
     }:
     let
-      # system = "aarch64-linux"; If you are running on ARM powered computer
       system = "x86_64-linux";
       overlays = [ nixgl.overlays ];
       pkgs = nixpkgs.legacyPackages.${system};
